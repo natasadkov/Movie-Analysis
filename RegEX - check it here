@@ -1,0 +1,8 @@
+title_regex=re.compile(r"class=\"title\"><h3>(.+)</h3>")
+date_regex=re.compile(r"class=\"clamp-details\">\s+<span>(.+)</span>")
+description_regex=re.compile(r"<div class=\"summary\">\s*([\S\s]+?)\s*</div>")
+score_regex = re.compile(r"<span class=\"title\">Metascore:</span>\s+<a class=\"metascore_anchor\" href=\"/movie/.*?/critic-reviews\">\s+<div class=\"metascore_w large movie .+\">(.*?)</div>")
+image_regex = re.compile(r"<a href=\"/movie/.*\"><img src=\"(.*)\" alt=\"")
+
+# Construct an HTTP pool for connection
+http=urllib3.PoolManager(ca_certs=certifi.where())
